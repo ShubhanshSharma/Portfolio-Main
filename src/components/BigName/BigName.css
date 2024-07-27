@@ -1,0 +1,15 @@
+.BIG_NAME{
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+    text-align: center;
+    color: white;
+    mix-blend-mode: difference;
+    font-weight: 600;
+}
+
+.word, .word2{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: min-content;
+}

@@ -1,0 +1,41 @@
+/* .HOME_IMAGE_CONTAINER1::after {
+    content: "";
+    background: #faf6f9;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    transform: scaleY(0.3); 
+    transform-origin: top;
+    z-index: 2;
+    animation: expandOverlay 0.8s ease-in-out forwards; 
+    animation-delay: 2s;
+  }
+  
+  @keyframes expandOverlay {
+    from { transform: scaleY(0.3); } 
+    to { transform: scaleY(0); } 
+  }
+  
+
+  .HOME_IMAGE_CONTAINER1::before {
+    content: "";
+    background: #faf6f9;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    transform: scaleY(0.7); 
+    transform-origin: bottom;
+    z-index: 2;
+    animation: expandOverlay2 0.8s ease-in-out forwards;
+    animation-delay: 2s;
+  }
+
+  @keyframes expandOverlay2 {
+    from { transform: scaleY(0.7); } 
+    to { transform: scaleY(0); } 
+  }
+   */
