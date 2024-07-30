@@ -18,6 +18,7 @@ export default function ShowProject(props){
     let H2Color = props.H2Color;
     let IMAGE = props.IMAGE;
     let height = props.height;
+    let width = props.width
 
     const imgRef = useRef(null);
     const parallaxTrigger =useRef(null);
@@ -53,12 +54,12 @@ export default function ShowProject(props){
                     start: 'top bottom',
                     end: 'bottom top',
                     scrub: 0,
-                    markers: true
+                    markers: false
                 },
                 
             })
 
-            tl2.fromTo(textRef.current,{y: -40, mixBlendMode: 'difference'}, {y: 10, mixBlendMode: 'difference'}, 0);
+            tl2.fromTo(textRef.current,{y: 280, mixBlendMode: 'difference'}, {y: -60, mixBlendMode: 'difference'}, 0);
         
     },[])
 
@@ -76,7 +77,7 @@ export default function ShowProject(props){
                     <div style={{fontWeight:`${H2Font}` , color:`#${H2Color}`, mixBlendMode:'difference'}}>{H2}</div>
                 </div>
 
-                <div className=" relative flex flex-col justify-between ml-[120px] h-[200px] mt-[60px]">                 
+                <div className="reveal relative flex flex-col justify-between ml-[120px] h-[200px] mt-[60px]">                 
 
                     <p className=" w-[250px] text-[16px] mt-[100px] font-normal text-left">{content}</p>
 
@@ -90,22 +91,23 @@ export default function ShowProject(props){
     }else{
         return(
             
-            <div className=" relative flex flex-row items-center  w-screen h-screen">
+            <div ref={parallaxTrigger} className=" relative flex flex-row items-center  w-screen h-screen">
 
                 {/* Image absolute */}
                 <img loading={lazy} ref={imgRef} src={`${IMAGE}.jpg`} alt='pic'  style={{height: `${height}px`}}
                     className=" rounded-3xl relative object-contain my-auto place-self-start"
                 />
+
                 <div ref={textRef} className="absolute right-[120px] text-[142px]  flex flex-row top-[100px]">
                     <div style={{fontWeight:`${H1Font}` , color:`#${H1Color}`, mixBlendMode:'difference'}}>{H1}</div>
                     <div style={{fontWeight:`${H2Font}` , color:`#${H2Color}`, mixBlendMode:'difference'}}>{H2}</div>
                 </div>
 
-                <div className=" relative flex flex-col justify-between top-[80px] left-[50px] h-[200px] ">
+                <div className="reveal relative flex flex-col justify-between top-[120px] left-[50px] h-auto  gap-8">
                     
                     <p className=" relative w-[250px]  text-[16px] font-normal text-left">{content}</p>
                      
-                    <a className='group relative w-fit mt-12 flex flex-row gap-1 justify-between'>
+                    <a className='group relative w-fit flex flex-row gap-1 justify-between'>
                         <span>Visit Case Study</span>
                         <img loading={lazy} src={arrow} alt='arrow'  className='relative -mb-1 mix-blend-difference  group-hover:rotate-0 duration-500 w-4 -rotate-45' />
                     </a>

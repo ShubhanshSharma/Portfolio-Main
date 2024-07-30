@@ -8,13 +8,13 @@ import React, { useRef } from "react";
 import AnimatedCursor from "react-animated-cursor";
 
 
-function Home() {
+function Landing() {
 
 
   return (
     <div className="Home align-middle bg-[#FAF9F6] relative w-full flex min-h-screen">
       
-      <div className='NAV_CONTAINER top-[36px] h-fit w-fit absolute  right-[200px]'>
+      <div className='NAV_CONTAINER top-[36px] h-fit w-fit absolute  right-[120px]'>
         <Navbar />
       </div>
 
@@ -36,11 +36,11 @@ function Home() {
       </div>
 
 
-      <div className=' absolute right-[220px] top-[180px]'>
+      <div className=' absolute right-[120px] top-[180px]'>
         <HomeImage />
       </div>
     </div>
   );
 }
 
-export default Home;
+export default Landing;

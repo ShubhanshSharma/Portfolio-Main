@@ -1,17 +1,46 @@
 import './App.css';
-import BigName from './components/BigName/BigName';
-import Home from './components/Home/Home';
-import HomeImage from './components/HomeImage/HomeImage';
+import Home from './components/Landing/Landing';
 import IntroPage from './components/InroPage/IntroPage';
 import Marquee from './components/Marquee/Marquee';
-import Navbar from './components/Navbar/Navbar';
 import SelectedWork from './components/Selected Work/SelectedWork';
-import CurrentTime from './components/Time/Time';
-import React from "react";
+import React, { useEffect } from "react";
 import AnimatedCursor from "react-animated-cursor";
-
+import gsap from 'gsap';
+import ScrollTrigger from 'gsap/ScrollTrigger';
+import Landing from './components/Landing/Landing';
+gsap.registerPlugin(ScrollTrigger);
 
 function App() {
+
+  useEffect(() =>{
+    const revealElements = document.querySelectorAll('.reveal');
+
+  revealElements.forEach(element => {
+    const tl = gsap.timeline({
+      scrollTrigger: {
+        trigger: element,
+        start: 'top bottom',
+        end: 'bottom top',
+        scrub: false,
+        toggleActions: 'play none none reverse',
+        markers: false,
+      }
+    });
+
+    tl.fromTo(element, {
+      yPercent: 100,
+      opacity: 0.2,
+    }, {
+      yPercent: 0,
+      opacity: 1,
+      duration: 1,
+      stagger: true,
+      ease: 'power2.out'
+    });
+
+  });
+
+  },[])
   return (
     <div className="App bg-[#FAF9F6] relative flex flex-col min-h-screen scroll-smooth overflow-x-clip">
 
@@ -55,19 +84,21 @@ function App() {
           }
         ]}
       />
-      <div className=''>
-        <Home />
+      <div className=' relative'>
+        <Landing />
       </div>
 
       <div className=' relative '>
         <Marquee />
       </div>
-      <div>
+      <div className=' relative mt-28'>
         <IntroPage />
       </div>
-      <div className=' mt-28'>
+      <div className='SELECTED_WORK_REVEAL relative'>
         <SelectedWork />
       </div>
+
+      
     </div>
   );
 }

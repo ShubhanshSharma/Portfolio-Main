@@ -18,8 +18,8 @@ export default function IntroImage(){
         let tl = gsap.timeline({
             scrollTrigger:{
                 trigger: imgRef.current,
-                start: 'bottom 90%',
-                end: 'bottom 90%',
+                start: '60% center',
+                end: '60% center',
                 toggleActions: 'play none none reverse ',
                 scrub: false,
                 markers: false
@@ -48,7 +48,7 @@ export default function IntroImage(){
             </div>
 
             <MagneticHover >
-            <a href='mailto:shubhanshsharma030604@gmail.com' className='group absolute font-bold w-[286px] bg-white mix-blend-difference px-8 py-4 rounded-[37px] -top-8 left-[60px]'>
+            <a href='mailto:shubhanshsharma030604@gmail.com' className='reveal group absolute font-bold w-[286px] bg-white mix-blend-difference px-8 py-4 rounded-[37px] -top-8 left-[60px]'>
                 Open to New Opportunities
                 <img src={arrow} alt='arrow' loading={lazy} className='absolute group-hover:rotate-0 duration-500 w-4 mix-blend-difference right-[16px] top-[23px] -rotate-45' />
             </a>

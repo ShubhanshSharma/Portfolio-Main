@@ -26,8 +26,8 @@ export default function BigName(){
                 
             })
 
-            tl.fromTo(word1.current,{y: -40}, {y: 10}, 0);
-            tl.fromTo(word2.current,{y: -40}, {y: 10}, 0);
+            tl.fromTo(word1.current,{y: 0}, {y: -80}, 0);
+            tl.fromTo(word2.current,{y: 0}, {y: -80}, 0);
         })
 
         let tl2 = gsap.timeline();
@@ -46,20 +46,8 @@ export default function BigName(){
             delay:1
         })
 
-        // let tl1 = gsap.timeline();
-        // tl1.fromTo('.word2', {
-        //     y:240,
-            
-        // },
-        // {
-        //     y:0,
-        //     opacity:1,
-        //     stagger:{
-        //         each:0.05
-        //     },
-        //     delay:3
-        // })
-    })
+        
+    },[])
 
 
     return(
