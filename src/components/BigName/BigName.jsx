@@ -26,8 +26,8 @@ export default function BigName(){
                 
             })
 
-            tl.fromTo(word1.current,{y: 0}, {y: -80}, 0);
-            tl.fromTo(word2.current,{y: 0}, {y: -80}, 0);
+            tl.fromTo(word1.current,{y: 20}, {y: -60}, 0);
+            tl.fromTo(word2.current,{y: 20}, {y: -60}, 0);
         })
 
         let tl2 = gsap.timeline();
@@ -52,14 +52,14 @@ export default function BigName(){
 
     return(
         <div ref={NameText} className="relative flex flex-row gap-11 w-fit">
-            <div ref={word1} className='BIG_NAME  h-fit tracking-tighter z-10 text-[109px] relative flex flex-row '>
+            <div ref={word1} className='BIG_NAME  h-fit tracking-tighter z-10 text-[109px] font-normal relative flex flex-row '>
                 {
                     'Shubhansh'.split('').map((word) => {
                         return word === '' ? <div className='word'>&nbsp;</div> : <div className='word'>{word}</div>
                     })
                 }
             </div>
-            <div ref={word2} className='BIG_NAME  h-fit tracking-tighter z-10 text-[109px]   relative flex flex-row '>
+            <div ref={word2} className='BIG_NAME  h-fit tracking-tighter z-10 text-[109px] font-normal  relative flex flex-row '>
                 {
                     'Sharma'.split('').map((word) => {
                         return word === '' ? <div className='word'>&nbsp;</div> : <div className='word'>{word}</div>

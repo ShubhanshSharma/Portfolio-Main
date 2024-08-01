@@ -15,11 +15,11 @@ export default function HeadingBig(props) {
           end: "bottom top",
           scrub: false, // Adjust scrub for desired effect,
           toggleActions: 'play none none reverse',
-          markers: true
+          markers: false
         },
       });
 
-      tl.fromTo(wordRef.children, { opacity: 0, xPercent: 120 }, { opacity: 1, xPercent: 0, duration: 0.8, delay: 0, stagger: 0.08, ease:'back.out' });
+      tl.fromTo(wordRef.children, { opacity: 0, xPercent: 120 }, { opacity: 1, xPercent: 0, duration: 1, delay: 0, stagger: 0.1, ease: 'power4.out' });
     });
   }, [wordRefs]);
 

@@ -7,7 +7,7 @@ import ShowProject from "../Show Project/ShowProject";
 export default function SelectedWork(){
 
     return(
-        <div className="SELECTED_WORK flex flex-col min-h-screen">
+        <div className="SELECTED_WORK flex flex-col min-h-screen pb-[150px]">
             <div className="SELECTED_WORK_HEADING text-right relative place-self-end right-0 leading-[130px]  font-bold w-[500px]">
             <HeadingBig content='Selected Work' size={127}  />
             </div>

@@ -1,5 +1,5 @@
 import { lazy } from 'react';
-import arrow from '../../Assets/arrow.svg';
+import arrow from '../../Assets/arrow black.svg';
 import { useEffect, useRef } from "react";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
@@ -45,7 +45,7 @@ export default function ShowProject(props){
                 xPercent: 0,
                 scale: 1,
                 duration: 2,
-                ease: 'expo.out',
+                ease: 'power4.out',
             })
 
             const tl2 = gsap.timeline({                
@@ -83,7 +83,7 @@ export default function ShowProject(props){
 
                     <a className='group relative w-fit mt-12 flex flex-row gap-1 justify-between'>
                         <span>Visit Case Study</span>
-                        <img loading={lazy} src={arrow} alt='arrow'  className='relative mix-blend-difference -mb-1  group-hover:rotate-0 duration-500 w-4 -rotate-45' />
+                        <img loading={lazy} src={arrow}   className='relative  -mb-1  group-hover:rotate-[40deg] duration-500 w-4 ' />
                     </a>
                 </div>
             </div>
@@ -109,7 +109,7 @@ export default function ShowProject(props){
                      
                     <a className='group relative w-fit flex flex-row gap-1 justify-between'>
                         <span>Visit Case Study</span>
-                        <img loading={lazy} src={arrow} alt='arrow'  className='relative -mb-1 mix-blend-difference  group-hover:rotate-0 duration-500 w-4 -rotate-45' />
+                        <img loading={lazy} src={arrow}   className='relative -mb-1 text-black group-hover:rotate-[40deg] duration-500 w-4' />
                     </a>
                      
                 </div>

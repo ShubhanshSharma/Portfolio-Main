@@ -12,7 +12,7 @@ function CurrentTime() {
   }, []);
 
   return (
-    <div className=' relative flex flex-col items-end'>
+    <div className=' big-shoulders-stencil-text-semibold opacity-70 relative flex flex-col items-end'>
         <p>2024</p>
         <div>{currentTime.toLocaleTimeString([], {
             hour: 'numeric',

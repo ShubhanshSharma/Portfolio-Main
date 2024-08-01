@@ -16,3 +16,12 @@ code {
     monospace;
 }
 
+.big-shoulders-stencil-text-semibold {
+  font-family: "Big Shoulders Stencil Text", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+}
+body::-webkit-scrollbar {
+  display: none;
+}

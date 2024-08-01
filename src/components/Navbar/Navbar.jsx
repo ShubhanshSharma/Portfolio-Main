@@ -12,7 +12,8 @@ export default function Navbar(){
     useEffect(() => {
         
         gsap.to('.NAV_BUTTON_MOVE_RIGHT0, .NAV_BUTTON_MOVE_RIGHT1, .NAV_BUTTON_MOVE_RIGHT2',{
-            xPercent: -100
+            xPercent: -100,
+            duration: 0.01
         }
     )
     },[])
@@ -24,21 +25,14 @@ export default function Navbar(){
           return updatedAnimation;
         });
 
-        // gsap.fromTo(`.NAV_BUTTON_MOVE_DOWN${index}`,{
-        //     yPercent: navAnimaion[index]?0: 100
-        // },{
-        //     yPercent: navAnimaion[index]? 100: 0,
-        //     duration: 0.5,
-        //     ease: Power2
-        // })
         gsap.fromTo(`.NAV_BUTTON_MOVE_RIGHT${index}`,{
             xPercent: navAnimaion[index]? -100: 0
         },{
             xPercent: navAnimaion[index]?0: 100,
-            duration: 0.7,
-            ease: Power2
+            duration: 1.5,
+            ease: 'power4.out'
         })
-      };
+    };
     
 
 
