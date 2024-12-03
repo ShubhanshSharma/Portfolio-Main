@@ -12,18 +12,15 @@ function Landing() {
 
 
   return (
-    <div className="Landing align-middle bg-[#FAF9F6] relative w-full flex min-h-screen">
+    <div className="Landing relative align-middle bg-[#FAF9F6] w-full flex min-h-screen">
       
-      <div className='NAV_CONTAINER top-[36px] h-fit w-fit absolute  right-[220px]'>
-        <Navbar />
-      </div>
 
-      <div className='CURSOR_SCALE_UP custom absolute top-9 left-[100px]'>
+      <div className='CURSOR_SCALE_UP custom absolute top-20 left-[100px]'>
         <CurrentTime />
       </div>
 
-      <div className=' LANDING_TEXT pointer-events-none flex flex-col justify-between w-auto top-[180px] h-[400px] absolute left-[220px]'>
-        <BigName />
+      <div className=' LANDING_TEXT pointer-events-none flex flex-col justify-end gap-20 w-auto top-[180px] h-[400px] absolute left-[220px]'>
+        {/* <BigName /> */}
         <div className=' relative w-[270px] font-light text-left'>
           Developer and designer working 
           independently as a creative crafting

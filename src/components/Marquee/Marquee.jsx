@@ -44,8 +44,8 @@ export default function Marquee(){
     return(
         <div className="sliderContainer relative w-screen h-fit">
             <div ref={slider} className="slider relative w-max text-[140px] text-[#faf9f6] mix-blend-difference flex flex-row">
-                <p ref={firstText}><span className=" font-extrabold text-[#05E5BF]">MERN</span> Developer - UX Designer -</p>
-                <p ref={secondText}><span className=" font-extrabold text-[#05E5BF]">MERN</span> Developer - UX Designer -</p>
+                <p ref={firstText}><span className=" font-extrabold text-[#05E5BF]">MERN</span> Developer ~ M.Tech-<span className=" font-extrabold text-[rgb(255,20,55)]">IT</span> ~</p>
+                <p ref={secondText}><span className=" font-extrabold text-[#05E5BF]">MERN</span> Developer ~ M.Tech-<span className=" font-extrabold text-[rgb(255,20,55)]">IT</span> ~</p>
             </div>
         </div>
     )

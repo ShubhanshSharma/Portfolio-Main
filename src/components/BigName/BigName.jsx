@@ -14,34 +14,38 @@ export default function BigName(){
 
     useEffect(() => {
 
-        const context = gsap.context(() => {
-            const tl = gsap.timeline({                
-                scrollTrigger:{
-                    trigger: NameText.current,
-                    start: 'top 180px',
-                    end: '140% top',
-                    scrub: 0,
-                    markers: false
-                },
-                
-            })
+        const tl = gsap.timeline({                
+            scrollTrigger:{
+                trigger: NameText.current,
+                start: 'top 140px',
+                end: '70% 140px',
+                toggleActions: 'play none none reverse',
+                scrub: 1,
+                markers: false
+            },
+            
+        })
 
-            tl.fromTo(word1.current,{y: 20}, {y: -60}, 0);
-            tl.fromTo(word2.current,{y: 20}, {y: -60}, 0);
+        tl.to(NameText.current,{
+            scale: 0.3,
+            duration: 1,
+            ease: 'power1.inOut',
+            top: '40px',
+            left: window.innerWidth<1200? '0' :'-20%',
         })
 
         let tl2 = gsap.timeline();
         tl2.fromTo('.word', {
-            yPercent: 100,
-            
+            xPercent: 100,
+            opacity: 0,
         },
         {
-            yPercent: 0,
+            xPercent: 0,
             opacity:1,
             duration: 1,
-            ease: "elastic.out(1,0.75)",
+            ease: 'power2.out',
             stagger:{
-                each:0.1
+                each:0.08
             },
             delay:1
         })
@@ -51,21 +55,21 @@ export default function BigName(){
 
 
     return(
-        <div ref={NameText} className="relative flex flex-row gap-11 w-fit">
-            <div ref={word1} className='BIG_NAME  h-fit tracking-tighter z-10 text-[109px] font-normal relative flex flex-row '>
+        <a href='#home' ref={NameText} className="absolute top-[260px] z-10  left-[100px] font-bold flex  flex-row gap-11 w-fit">
+            <div ref={word1} className='BIG_NAME  h-fit tracking-tighter text-[109px] relative flex flex-row '>
                 {
-                    'Shubhansh'.split('').map((word) => {
-                        return word === '' ? <div className='word'>&nbsp;</div> : <div className='word'>{word}</div>
+                    '~Shubhansh'.split('').map((word) => {
+                        return word === '' ? <div className='word'>&nbsp;</div> : <div className='word  bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500 bg-clip-text text-transparent'>{word}</div>
                     })
                 }
             </div>
-            <div ref={word2} className='BIG_NAME  h-fit tracking-tighter z-10 text-[109px] font-normal  relative flex flex-row '>
+            <div ref={word2} className='BIG_NAME  h-fit tracking-tighter text-[109px]  relative flex flex-row '>
                 {
                     'Sharma'.split('').map((word) => {
-                        return word === '' ? <div className='word'>&nbsp;</div> : <div className='word'>{word}</div>
+                        return word === '' ? <div className='word'>&nbsp;</div> : <div className='word hidden xl:block bg-gradient-to-br from-pink-500 via-red-500 to-yellow-500 bg-clip-text text-transparent'>{word}</div>
                     })
                 }
             </div>
-        </div>
+        </a>
     )
 }

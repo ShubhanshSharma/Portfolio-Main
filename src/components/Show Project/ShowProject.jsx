@@ -9,7 +9,7 @@ export default function ShowProject(props){
 
     let side = props.side;
     let content = props.content;
-    let caseStudy = props.caseStudy;
+    let git = props.git;
     let H1 = props.H1;
     let H2 = props.H2;
     let H1Font = props.H1Font;
@@ -81,8 +81,8 @@ export default function ShowProject(props){
 
                     <p className=" w-[250px] text-[16px] mt-[100px] font-normal text-left">{content}</p>
 
-                    <a className='group relative w-fit mt-12 flex flex-row gap-1 justify-between'>
-                        <span>Visit Case Study</span>
+                    <a href={git} target="_blank" className='group relative w-fit mt-12 flex flex-row gap-1 justify-between'>
+                        <span>Visit</span>
                         <img loading={lazy} src={arrow}   className='relative  -mb-1  group-hover:rotate-[40deg] duration-500 w-4 ' />
                     </a>
                 </div>
@@ -107,8 +107,8 @@ export default function ShowProject(props){
                     
                     <p className=" relative w-[250px]  text-[16px] font-normal text-left">{content}</p>
                      
-                    <a className='group relative w-fit flex flex-row gap-1 justify-between'>
-                        <span>Visit Case Study</span>
+                    <a href={git} target="_blank" className='group relative w-fit flex flex-row gap-1 justify-between'>
+                        <span>Visit</span>
                         <img loading={lazy} src={arrow}   className='relative -mb-1 text-black group-hover:rotate-[40deg] duration-500 w-4' />
                     </a>
                      

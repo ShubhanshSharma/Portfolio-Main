@@ -8,13 +8,13 @@ import gsap from "gsap";
 export default function HomeImage(){
 
     useEffect(() => {
-        gsap.fromTo('.HOME_IMAGE_CONTAINER',{
-            opacity: 0,
-            xPercent: 130,
-            scale: 0.3
+        gsap.fromTo('.HOME_IMAGE',{
+            opacity: 1,
+            yPercent: -100,
+            scale: 1
         },{
             opacity: 1,
-            xPercent: 0,
+            yPercent: 0,
             scale: 1,
             duration: 2,
             delay: 2,
@@ -31,7 +31,7 @@ export default function HomeImage(){
     return(
 
         <Tilt tiltReverse={false}>
-        <div className='HOME_IMAGE_CONTAINER relative w-fit overflow-clip'>
+        <div className='HOME_IMAGE_CONTAINER relative aspect-square overflow-hidden w-[400px]'>
             <img className="HOME_IMAGE  w-[400px] object-cover" src='https://imgur.com/arNqmj9.jpg' alt="" />
         </div>
         </Tilt>

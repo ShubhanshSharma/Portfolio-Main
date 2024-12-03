@@ -19,7 +19,7 @@ export default function HeadingBig(props) {
         },
       });
 
-      tl.fromTo(wordRef.children, { opacity: 0, xPercent: 120 }, { opacity: 1, xPercent: 0, duration: 1, delay: 0, stagger: 0.1, ease: 'power4.out' });
+      tl.fromTo(wordRef.children, { opacity: 0, xPercent: 120 }, { opacity: 1, xPercent: 0, duration: 1.5, delay: 0, stagger: 0.2, ease: 'power4.out' });
     });
   }, [wordRefs]);
 

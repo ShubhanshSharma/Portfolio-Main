@@ -1,3 +1,11 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+.FIRA{
+    /* mix-blend-mode: difference; */
+    /* background-color: #0E0E0D; */
+    background-color: white;
+    background-blend-mode: difference;
+}

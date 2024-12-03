@@ -8,6 +8,7 @@ import gsap from 'gsap';
 import ScrollTrigger from 'gsap/ScrollTrigger';
 import Landing from '../Landing/Landing';
 import Footer from '../Footer/Footer';
+import Navbar from '../Navbar/Navbar';
 gsap.registerPlugin(ScrollTrigger);
 
 export default function HomePage() {
@@ -42,7 +43,7 @@ export default function HomePage() {
 
   },[])
   return (
-    <div className="home bg-[#FAF9F6] relative flex flex-col min-h-screen scroll-smooth overflow-x-clip">
+    <div id='home' className="home bg-[#FAF9F6] relative flex flex-col items-center min-h-screen scroll-smooth overflow-x-clip">
 
       <AnimatedCursor
         trailingSpeed={6}
@@ -84,21 +85,22 @@ export default function HomePage() {
           }
         ]}
       />
-      <div className=' relative'>
-        <Landing />
-      </div>
+      
+        <Navbar />
 
-      <div className=' relative '>
+        <Landing />
+
+      <div  className=' relative '>
         <Marquee />
       </div>
-      <div className=' relative mt-28'>
+      <div id='about' className=' relative mt-28'>
         <IntroPage />
       </div>
-      <div className='SELECTED_WORK_REVEAL relative'>
+      <div id='work' className='SELECTED_WORK_REVEAL relative'>
         <SelectedWork />
       </div>
 
-      <div className=' relative'>
+      <div id='contact' className=' relative'>
         <Footer />
       </div>
 

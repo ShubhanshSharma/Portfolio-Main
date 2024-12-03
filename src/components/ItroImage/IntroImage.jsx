@@ -18,7 +18,7 @@ export default function IntroImage(){
         let tl = gsap.timeline({
             scrollTrigger:{
                 trigger: imgRef.current,
-                start: '0% center',
+                start: '50% center',
                 end: '60% center',
                 toggleActions: 'play none none reverse',
                 scrub: false,
@@ -29,14 +29,15 @@ export default function IntroImage(){
             xPercent: -100,
             yPercent: -50,
             opacity: 0,
-            rotate: 90,
+            // rotate: 90,
         },{
             xPercent: 0,
             yPercent: 0,
             rotate: 0,
             opacity: 1,
-            duration: 3,
-            ease: "elastic.out(1,0.5)",
+            duration: 2,
+            // ease: "elastic.out(1,0.5)",
+            ease: "power4.out",
 
         }, 0)
     },[])
