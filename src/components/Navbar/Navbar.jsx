@@ -7,7 +7,7 @@ gsap.registerPlugin(ScrollTrigger);
 
 export default function Navbar(){
 
-    const [navAnimaion, setNavAnimation] = useState([true,true,true]);
+    const [navAnimaion, setNavAnimation] = useState([true,true,true, true]);
     const [NavbarHover, setNavbarHover] = useState(true);
 
     useEffect(() => {
@@ -40,7 +40,7 @@ export default function Navbar(){
             ease: 'power1.inOut'
         })
 
-        gsap.to('.NAV_BUTTON_MOVE_RIGHT0, .NAV_BUTTON_MOVE_RIGHT1, .NAV_BUTTON_MOVE_RIGHT2',{
+        gsap.to('.NAV_BUTTON_MOVE_RIGHT0, .NAV_BUTTON_MOVE_RIGHT1, .NAV_BUTTON_MOVE_RIGHT2, .NAV_BUTTON_MOVE_RIGHT3',{
             xPercent: -100,
             duration: 0.01
         })
@@ -71,10 +71,10 @@ export default function Navbar(){
             onMouseEnter={() => setNavbarHover(true)} onMouseLeave={() => setNavbarHover(false)} >
 
             <a href='https://www.youtube.com/playlist?list=PLG3Op_4yeGuAVG9M8RGPxHNwaJT3U1V0E' className='NAV_BUTTONS CURSOR_SCALE_DOWN mix-blend-difference text-neutral-100 relative w-fit px-3 py-1 overflow-clip ' 
-                onMouseEnter={() => handleButtonHover(0)} 
-                onMouseLeave={() => handleButtonHover(0)}>
+                onMouseEnter={() => handleButtonHover(3)} 
+                onMouseLeave={() => handleButtonHover(3)}>
                 <span>Data Science</span>
-                <div className='NAV_BUTTON_MOVE_RIGHT0 h-0 w-full border-b-[1px] border-neutral-50 absolute left-0  bottom-0 rounded-full'></div>
+                <div className='NAV_BUTTON_MOVE_RIGHT3 h-0 w-full border-b-[1px] border-neutral-50 absolute left-0  bottom-0 rounded-full'></div>
                 {/* <div className='NAV_BUTTON_MOVE_DOWN0 w-0 h-[70%] border-r-[1px] border-neutral-50 absolute left-0 bottom-0 rounded-full '></div> */}
             </a>
 
