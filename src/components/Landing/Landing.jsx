@@ -20,7 +20,7 @@ function Landing() {
       </div>
 
       <div className=' LANDING_TEXT pointer-events-none flex flex-col justify-end gap-20 w-auto top-[180px] h-[400px] absolute left-[220px]'>
-        {/* <BigName /> */}
+        
         <div className=' relative w-[270px] font-light text-left'>
           Developer and designer working 
           independently as a creative crafting

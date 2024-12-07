@@ -39,6 +39,17 @@ export default function Navbar(){
             duration: 0.5,
             ease: 'power1.inOut'
         })
+        gsap.fromTo('.NAV_BUTTONS',{
+            y: -50,
+        },{
+            y:0,
+            duration: 0.5,
+            ease: 'power2.out',
+            stagger:{
+                each:0.3
+            },
+            delay: 1
+        })
 
         gsap.to('.NAV_BUTTON_MOVE_RIGHT0, .NAV_BUTTON_MOVE_RIGHT1, .NAV_BUTTON_MOVE_RIGHT2, .NAV_BUTTON_MOVE_RIGHT3',{
             xPercent: -100,
@@ -70,7 +81,7 @@ export default function Navbar(){
         <div style={{mixBlendMode:'difference'}} className="FIRA fixed h-[150px] rounded-full items-end mt-[-100px] z-[3] pb-2 w-11/12 flex flex-row group justify-end  gap-16 lg:px-32"
             onMouseEnter={() => setNavbarHover(true)} onMouseLeave={() => setNavbarHover(false)} >
 
-            <a href='https://www.youtube.com/playlist?list=PLG3Op_4yeGuAVG9M8RGPxHNwaJT3U1V0E' className='NAV_BUTTONS CURSOR_SCALE_DOWN mix-blend-difference text-neutral-100 relative w-fit px-3 py-1 overflow-clip ' 
+            <a href='https://www.youtube.com/playlist?list=PLG3Op_4yeGuAVG9M8RGPxHNwaJT3U1V0E' target='_blank' className='NAV_BUTTONS CURSOR_SCALE_DOWN mix-blend-difference text-neutral-100 relative w-fit px-3 py-1 overflow-clip ' 
                 onMouseEnter={() => handleButtonHover(3)} 
                 onMouseLeave={() => handleButtonHover(3)}>
                 <span>Data Science</span>

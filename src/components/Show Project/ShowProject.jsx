@@ -23,6 +23,7 @@ export default function ShowProject(props){
     const imgRef = useRef(null);
     const parallaxTrigger =useRef(null);
     const textRef =useRef(null);
+    const headingRef =useRef(null);
 
     useEffect(() => {
         
@@ -58,8 +59,19 @@ export default function ShowProject(props){
                 },
                 
             })
+            const tl3 = gsap.timeline({                
+                scrollTrigger:{
+                    trigger: textRef.current,
+                    start: 'top bottom',
+                    end: 'bottom top',
+                    scrub: 0,
+                    markers: false
+                },
+                
+            })
 
-            tl2.fromTo(textRef.current,{y: 280, mixBlendMode: 'difference'}, {y: -60, mixBlendMode: 'difference'}, 0);
+            tl2.fromTo(headingRef.current,{y: 280, mixBlendMode: 'difference'}, {y: -60, mixBlendMode: 'difference'}, 0);
+            tl3.fromTo(textRef.current,{y: 0}, {y: -220,});
         
     },[])
 
@@ -72,12 +84,12 @@ export default function ShowProject(props){
                 <img loading={lazy} ref={imgRef} src={`${IMAGE}.jpg`} alt='pic' style={{height: `${height}px`}}
                     className=" rounded-3xl relative object-contain my-auto place-self-end"
                 />
-                <div ref={textRef} className="absolute left-[120px] text-[142px] top-[100px] flex flex-row">
+                <div ref={headingRef} className="absolute left-[120px] text-[142px] top-[100px] flex flex-row">
                     <div style={{fontWeight:`${H1Font}` , color:`#${H1Color}`, mixBlendMode:'difference'}}>{H1}</div>
                     <div style={{fontWeight:`${H2Font}` , color:`#${H2Color}`, mixBlendMode:'difference'}}>{H2}</div>
                 </div>
 
-                <div className="reveal relative flex flex-col justify-between ml-[120px] h-[200px] mt-[60px]">                 
+                <div ref={textRef} className="WORK_TEXT absolute flex flex-col justify-between lg:left-[10vw] lg:mt-[40dvh]">                 
 
                     <p className=" w-[250px] text-[16px] mt-[100px] font-normal text-left">{content}</p>
 
@@ -98,12 +110,12 @@ export default function ShowProject(props){
                     className=" rounded-3xl relative object-contain my-auto place-self-start"
                 />
 
-                <div ref={textRef} className="absolute right-[120px] text-[142px]  flex flex-row top-[100px]">
+                <div ref={headingRef} className="absolute right-[120px] text-[142px]  flex flex-row top-[100px]">
                     <div style={{fontWeight:`${H1Font}` , color:`#${H1Color}`, mixBlendMode:'difference'}}>{H1}</div>
                     <div style={{fontWeight:`${H2Font}` , color:`#${H2Color}`, mixBlendMode:'difference'}}>{H2}</div>
                 </div>
 
-                <div className="reveal relative flex flex-col justify-between top-[120px] left-[50px] h-auto  gap-8">
+                <div ref={textRef} className="WORK_TEXT absolute flex flex-col justify-between lg:mt-[46dvh] right-[10vw] h-auto  gap-8">
                     
                     <p className=" relative w-[250px]  text-[16px] font-normal text-left">{content}</p>
                      

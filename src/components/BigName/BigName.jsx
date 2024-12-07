@@ -20,7 +20,7 @@ export default function BigName(){
                 start: 'top 140px',
                 end: '70% 140px',
                 toggleActions: 'play none none reverse',
-                scrub: 1,
+                scrub: false,
                 markers: false
             },
             
@@ -29,7 +29,7 @@ export default function BigName(){
         tl.to(NameText.current,{
             scale: 0.3,
             duration: 1,
-            ease: 'power1.inOut',
+            ease: 'power2.inOut',
             top: '40px',
             left: window.innerWidth<1200? '0' :'-20%',
         })
@@ -47,7 +47,7 @@ export default function BigName(){
             stagger:{
                 each:0.08
             },
-            delay:1
+            delay:0
         })
 
         

@@ -11,7 +11,7 @@ export default function Footer(){
 
     return(
         <>
-        <div className=" w-screen h-[95dvh] relative text-white bg-[#0E0E0D] ">
+        <div className=" w-screen h-[100dvh] relative text-white bg-[#0E0E0D] ">
 
             <div className=" relative flex flex-col  w-fit text-left ml-[35px] pt-[70px]">
                 <p className=" relative opacity-60 text-[50px]">Interested in working with me?</p>
