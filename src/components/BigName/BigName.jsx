@@ -3,6 +3,9 @@ import { useEffect, useRef} from "react";
 import {gsap,} from "gsap";
 import ScrollTrigger from 'gsap/ScrollTrigger';
 gsap.registerPlugin(ScrollTrigger);
+import { ScrollToPlugin } from 'gsap/ScrollToPlugin';
+gsap.registerPlugin(ScrollToPlugin);
+
 
 export default function BigName(){
 

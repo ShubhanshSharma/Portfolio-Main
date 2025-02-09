@@ -70,7 +70,7 @@ export default function ShowProject(props){
                 
             })
 
-            tl2.fromTo(headingRef.current,{y: 280, mixBlendMode: 'difference'}, {y: -60, mixBlendMode: 'difference'}, 0);
+            tl2.fromTo(headingRef.current,{y: 380, mixBlendMode: 'difference'}, {y: -60, mixBlendMode: 'difference'}, 0);
             tl3.fromTo(textRef.current,{y: 0}, {y: -220,});
         
     },[])
