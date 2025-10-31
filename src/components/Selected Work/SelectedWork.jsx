@@ -12,9 +12,9 @@ export default function SelectedWork(){
             <HeadingBig content='Selected Work' size={127}  />
             </div>
             
-            <ShowProject git='https://github.com/ShubhanshSharma/tedxdavv2' side='right' H1='TEDx' H2='DAVV' H1Font='700' H2Font='300' H1Color='0EFFE2' H2Color='fff' height='450'
+            <ShowProject git='https://tedxdavv.in' side='right' H1='TEDx' H2='DAVV' H1Font='700' H2Font='300' H1Color='0EFFE2' H2Color='fff' height='450'
                         content = 'Design and Development for the central India’s largest university’s event, TEDxDAVV'
-                        IMAGE='https://imgur.com/tyPwF4O'
+                        IMAGE='https://res.cloudinary.com/dkyvtqujp/image/upload/v1761928833/Screenshot_2025-10-31_220943_l1krvy.png'
             />
 
             <ShowProject git='https://github.com/ShubhanshSharma/Study-Notion' side='left' H1='StudyGraha' H2='' H1Font='700' H2Font='' H1Color='FFF6E9' H2Color='' height='450' width='400'
